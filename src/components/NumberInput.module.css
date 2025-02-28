@@ -4,8 +4,8 @@
   box-shadow: 0 0 0 1px var(--dc-gray300) inset;
   color: var(--dc-black);
   display: flex;
-  height: 24px;
-  max-width: 106px;
+  height: 26px;
+  max-width: 108px;
   padding: 3px;
   width: 100%;
 
@@ -25,7 +25,13 @@
   border: none;
   border-radius: 2px;
   color: var(--dc-black);
+  display: flex;
+  height: 20px;
   outline: none;
+  padding: 2px;
+  place-items: center;
+  text-align: center;
+  width: 20px;
 }
 
 .input {

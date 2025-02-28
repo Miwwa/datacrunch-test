@@ -3,16 +3,11 @@
   --dc-black: #1a1a1a;
   --dc-gray50: #fafafa;
   --dc-gray100: #f5f5f5;
+  --dc-gray300: #e1e1e1;
   --dc-gray400: #b9b9b9;
   --dc-gray500: #909090;
   --dc-gray600: #707070;
   --dc-primary: #4b7a8a;
 
   --dc-font-family: 'Sofia Sans';
-  --dc-font-label-size: 15px;
-  --dc-font-form-size: 16px;
-  --dc-font-form-weight: 400;
-
-  --dc-input-border-radius: 8px;
-  --dc-button-border-radius: 8px;
 }

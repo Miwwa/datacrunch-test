@@ -2,10 +2,7 @@ import styles from './App.module.css'
 import {
   Button,
   Form,
-  Group,
-  Input,
   Label,
-  NumberField,
   Slider,
   SliderOutput,
   SliderThumb,
@@ -13,6 +10,7 @@ import {
   TextField
 } from "react-aria-components";
 import TextInput from "./components/TextInput.tsx";
+import NumberInput from "./components/NumberInput.tsx";
 
 function App() {
 
@@ -23,17 +21,23 @@ function App() {
         <Form>
           <TextField>
             <Label>Name</Label>
-            <TextInput />
+            <TextInput/>
             <TextInput value="145" disabled={true}/>
           </TextField>
-          <NumberField defaultValue={4} minValue={0}>
+          <TextField>
             <Label>Size (GB)</Label>
-            <Group>
-              <Button slot="decrement">-</Button>
-              <Input/>
-              <Button slot="increment">+</Button>
-            </Group>
-          </NumberField>
+            <NumberInput
+              value={4}
+              minValue={0}
+              maxValue={128}
+            />
+            <NumberInput
+              value={1}
+              minValue={0}
+              maxValue={128}
+              isDisabled={true}
+            />
+          </TextField>
           <Slider defaultValue={30}>
             <Label/>
             <SliderOutput/>
