@@ -12,6 +12,7 @@ import {
   SliderTrack,
   TextField
 } from "react-aria-components";
+import TextInput from "./components/TextInput.tsx";
 
 function App() {
 
@@ -22,7 +23,8 @@ function App() {
         <Form>
           <TextField>
             <Label>Name</Label>
-            <Input/>
+            <TextInput />
+            <TextInput value="145" disabled={true}/>
           </TextField>
           <NumberField defaultValue={4} minValue={0}>
             <Label>Size (GB)</Label>

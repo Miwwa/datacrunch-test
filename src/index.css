@@ -1,15 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Sofia+Sans&display=swap');
+@import "variables.css";
 
 :root {
-  font-family: "Sofia Sans", serif;
+  font-family: var(--dc-font-family), serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   line-height: 1.5;
 
   color-scheme: light dark;
-  color: #1a1a1a;
-  background-color: #f5f5f5;
+  color: var(--dc-black);
+  background-color: var(--dc-gray100);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -26,4 +27,14 @@
   padding: 2rem;
   place-items: flex-start;
   text-align: left;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
