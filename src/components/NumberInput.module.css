@@ -1,0 +1,46 @@
+.field {
+  background-color: var(--dc-white);
+  border-radius: 4px;
+  box-shadow: 0 0 0 1px var(--dc-gray300) inset;
+  color: var(--dc-black);
+  display: flex;
+  height: 24px;
+  max-width: 106px;
+  padding: 3px;
+  width: 100%;
+
+  &:focus-within {
+    box-shadow: 0 0 0 1px var(--dc-gray500) inset;
+  }
+
+  &[data-disabled] {
+    background-color: var(--dc-gray50);
+    box-shadow: 0 0 0 1px var(--dc-gray400) inset;
+    color: var(--dc-gray500);
+  }
+}
+
+.button {
+  background-color: var(--dc-gray100);
+  border: none;
+  border-radius: 2px;
+  color: var(--dc-black);
+  outline: none;
+}
+
+.input {
+  background-color: var(--dc-white);
+  border: none;
+  color: var(--dc-black);
+  font-size: 14px;
+  font-style: normal;
+  outline: none;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+
+  &[data-disabled] {
+    background-color: var(--dc-gray50);
+    color: var(--dc-gray500);
+  }
+}

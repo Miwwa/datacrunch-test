@@ -1,11 +1,11 @@
 .input {
   background-color: var(--dc-white);
-  border: 1px solid var(--dc-gray400);
-  border-radius: var(--dc-input-border-radius);
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 0 0 1px var(--dc-gray400) inset;
   color: var(--dc-black);
-  font-size: var(--dc-font-form-size);
+  font-size: 16px;
   font-style: normal;
-  font-weight: var(--dc-font-form-weight);
   height: 32px;
   max-width: 178px;
   padding: 8px 8px 8px 16px;
@@ -16,13 +16,12 @@
   }
 
   &:hover {
-    border-color: var(--dc-gray500);
+    box-shadow: 0 0 0 1px var(--dc-gray500) inset;
   }
 
   &:focus {
-    border: 2px solid var(--dc-primary);
+    box-shadow: 0 0 0 2px var(--dc-primary) inset;
     outline: none;
-    padding: 7px 7px 7px 15px;
 
     &::placeholder {
       color: transparent;
@@ -31,7 +30,7 @@
 
   &:disabled {
     background-color: var(--dc-gray50);
-    border-color: var(--dc-gray400);
+    box-shadow: 0 0 0 1px var(--dc-gray400) inset;
     color: var(--dc-gray500);
   }
 }
