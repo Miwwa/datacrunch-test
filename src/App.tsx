@@ -1,5 +1,4 @@
 import styles from './App.module.css'
-import {Form, Label, TextField} from "react-aria-components";
 import TextInput from "./components/TextInput.tsx";
 import NumberInput from "./components/NumberInput.tsx";
 import SliderInput from "./components/SliderInput.tsx";
@@ -9,129 +8,126 @@ function App() {
 
   return (
     <>
-      <h1>Form</h1>
+      <h1>Showcase</h1>
       <div className={styles.card}>
-        <Form>
-          <TextField>
-            <Label>Name</Label>
-            <TextInput/>
-            <TextInput value="145" disabled={true}/>
-          </TextField>
-          <TextField>
-            <Label>Size (GB)</Label>
-            <NumberInput
-              value={4}
-              minValue={0}
-              maxValue={128}
-            />
-            <NumberInput
-              value={1}
-              minValue={0}
-              maxValue={128}
-              isDisabled={true}
-            />
-          </TextField>
-          <SliderInput
-            minValue={0}
-            maxValue={128}
-          />
-          <div style={{display: 'flex', gap: 8}}>
-            <ButtonWrapper
-              size={ButtonSize.Small}
-              color={ButtonColor.Primary}
-              variant={ButtonVariant.Contained}
-            >
-              Button
-            </ButtonWrapper>
-            <ButtonWrapper
-              size={ButtonSize.Small}
-              color={ButtonColor.Primary}
-              variant={ButtonVariant.Outlined}
-            >
-              Button
-            </ButtonWrapper>
-            <ButtonWrapper
-              size={ButtonSize.Small}
-              color={ButtonColor.Secondary}
-              variant={ButtonVariant.Contained}
-            >
-              Button
-            </ButtonWrapper>
-            <ButtonWrapper
-              size={ButtonSize.Small}
-              color={ButtonColor.Secondary}
-              variant={ButtonVariant.Outlined}
-            >
-              Button
-            </ButtonWrapper>
-          </div>
+        <div className={styles.header}>Text Input</div>
+        <div>normal</div>
+        <TextInput/>
+        <div>disabled</div>
+        <TextInput value="1234" disabled={true}/>
 
-          <div style={{display: 'flex', gap: 8, marginTop: 8}}>
-            <ButtonWrapper
-              size={ButtonSize.Medium}
-              color={ButtonColor.Primary}
-              variant={ButtonVariant.Contained}
-            >
-              Button
-            </ButtonWrapper>
-            <ButtonWrapper
-              size={ButtonSize.Medium}
-              color={ButtonColor.Primary}
-              variant={ButtonVariant.Outlined}
-            >
-              Button
-            </ButtonWrapper>
-            <ButtonWrapper
-              size={ButtonSize.Medium}
-              color={ButtonColor.Secondary}
-              variant={ButtonVariant.Contained}
-            >
-              Button
-            </ButtonWrapper>
-            <ButtonWrapper
-              size={ButtonSize.Medium}
-              color={ButtonColor.Secondary}
-              variant={ButtonVariant.Outlined}
-            >
-              Button
-            </ButtonWrapper>
-          </div>
+        <div className={styles.header}>Number Input</div>
+        <div>normal</div>
+        <NumberInput
+          defaultValue={0}
+          minValue={0}
+          maxValue={128}
+        />
+        <div>disabled</div>
+        <NumberInput
+          defaultValue={1}
+          minValue={0}
+          maxValue={128}
+          isDisabled={true}
+        />
 
-          <div style={{display: 'flex', gap: 8, marginTop: 8}}>
-            <ButtonWrapper
-              size={ButtonSize.Medium}
-              color={ButtonColor.Primary}
-              variant={ButtonVariant.Contained}
-              isDisabled={true}
-            >
-              Button
-            </ButtonWrapper>
-            <ButtonWrapper
-              size={ButtonSize.Medium}
-              color={ButtonColor.Primary}
-              variant={ButtonVariant.Outlined}
-              isDisabled={true}
-            >
-              Button
-            </ButtonWrapper>
-            <ButtonWrapper
-              size={ButtonSize.Medium}
-              color={ButtonColor.Secondary}
-              variant={ButtonVariant.Contained}
-              isDisabled={true}
-            >
-              Button
-            </ButtonWrapper>
-            <ButtonWrapper
-              size={ButtonSize.Medium}
-              color={ButtonColor.Secondary}
-              variant={ButtonVariant.Outlined}
-              isDisabled={true}
-            >
-              Button
-            </ButtonWrapper>
-          </div>
-        </Form>
+        <div className={styles.header}>Slider</div>
+        <SliderInput
+          minValue={0}
+          maxValue={16}
+        />
+
+        <div className={styles.header}>Button</div>
+        <div style={{display: 'grid', gap: 8, gridTemplateColumns: 'repeat(4, 1fr)'}}>
+          <ButtonWrapper
+            size={ButtonSize.Small}
+            color={ButtonColor.Primary}
+            variant={ButtonVariant.Contained}
+          >
+            Button
+          </ButtonWrapper>
+          <ButtonWrapper
+            size={ButtonSize.Small}
+            color={ButtonColor.Primary}
+            variant={ButtonVariant.Outlined}
+          >
+            Button
+          </ButtonWrapper>
+          <ButtonWrapper
+            size={ButtonSize.Small}
+            color={ButtonColor.Secondary}
+            variant={ButtonVariant.Contained}
+          >
+            Button
+          </ButtonWrapper>
+          <ButtonWrapper
+            size={ButtonSize.Small}
+            color={ButtonColor.Secondary}
+            variant={ButtonVariant.Outlined}
+          >
+            Button
+          </ButtonWrapper>
+          <ButtonWrapper
+            size={ButtonSize.Medium}
+            color={ButtonColor.Primary}
+            variant={ButtonVariant.Contained}
+          >
+            Button
+          </ButtonWrapper>
+          <ButtonWrapper
+            size={ButtonSize.Medium}
+            color={ButtonColor.Primary}
+            variant={ButtonVariant.Outlined}
+          >
+            Button
+          </ButtonWrapper>
+          <ButtonWrapper
+            size={ButtonSize.Medium}
+            color={ButtonColor.Secondary}
+            variant={ButtonVariant.Contained}
+          >
+            Button
+          </ButtonWrapper>
+          <ButtonWrapper
+            size={ButtonSize.Medium}
+            color={ButtonColor.Secondary}
+            variant={ButtonVariant.Outlined}
+          >
+            Button
+          </ButtonWrapper>
+          <ButtonWrapper
+            size={ButtonSize.Medium}
+            color={ButtonColor.Primary}
+            variant={ButtonVariant.Contained}
+            isDisabled={true}
+          >
+            Button
+          </ButtonWrapper>
+          <ButtonWrapper
+            size={ButtonSize.Medium}
+            color={ButtonColor.Primary}
+            variant={ButtonVariant.Outlined}
+            isDisabled={true}
+          >
+            Button
+          </ButtonWrapper>
+          <ButtonWrapper
+            size={ButtonSize.Medium}
+            color={ButtonColor.Secondary}
+            variant={ButtonVariant.Contained}
+            isDisabled={true}
+          >
+            Button
+          </ButtonWrapper>
+          <ButtonWrapper
+            size={ButtonSize.Medium}
+            color={ButtonColor.Secondary}
+            variant={ButtonVariant.Outlined}
+            isDisabled={true}
+          >
+            Button
+          </ButtonWrapper>
+        </div>
       </div>
     </>
   )
