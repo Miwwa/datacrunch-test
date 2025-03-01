@@ -5,16 +5,18 @@ import styles from './NumberInput.module.css'
 
 export type NumberInputProps = {
   value?: number
+  defaultValue?: number
   onChange?: (value: number) => void
   minValue?: number
   maxValue?: number
   isDisabled?: boolean
 }
 
-export default function NumberInput({value, onChange, minValue, maxValue, isDisabled}: NumberInputProps) {
+export default function NumberInput({value, defaultValue, onChange, minValue, maxValue, isDisabled}: NumberInputProps) {
   return (
     <NumberField
       value={value}
+      defaultValue={defaultValue}
       minValue={minValue}
       maxValue={maxValue}
       onChange={onChange}

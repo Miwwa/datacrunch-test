@@ -3,14 +3,11 @@ import {
   Button,
   Form,
   Label,
-  Slider,
-  SliderOutput,
-  SliderThumb,
-  SliderTrack,
   TextField
 } from "react-aria-components";
 import TextInput from "./components/TextInput.tsx";
 import NumberInput from "./components/NumberInput.tsx";
+import SliderInput from "./components/SliderInput.tsx";
 
 function App() {
 
@@ -38,13 +35,10 @@ function App() {
               isDisabled={true}
             />
           </TextField>
-          <Slider defaultValue={30}>
-            <Label/>
-            <SliderOutput/>
-            <SliderTrack style={{height: 30}}>
-              <SliderThumb/>
-            </SliderTrack>
-          </Slider>
+          <SliderInput
+            minValue={0}
+            maxValue={128}
+          />
           <div style={{display: 'flex', gap: 8}}>
             <Button type="reset">Clear</Button>
             <Button type="submit">Submit</Button>
