@@ -1,21 +1,22 @@
 .field {
   background-color: var(--dc-white);
-  border-radius: 4px;
-  box-shadow: 0 0 0 1px var(--dc-gray300) inset;
+  border-radius: var(--dc-radius-4);
+  box-shadow: var(--dc-shadow-1) var(--dc-gray300) inset;
   color: var(--dc-black);
   display: flex;
-  height: 26px;
+  height: var(--dc-px-26);
+  padding: var(--dc-px-3);
+  min-width: 80px;
   max-width: 108px;
-  padding: 3px;
   width: 100%;
 
   &:focus-within {
-    box-shadow: 0 0 0 1px var(--dc-gray500) inset;
+    box-shadow: var(--dc-shadow-1) var(--dc-gray500) inset;
   }
 
   &[data-disabled] {
     background-color: var(--dc-gray50);
-    box-shadow: 0 0 0 1px var(--dc-gray400) inset;
+    box-shadow: var(--dc-shadow-1) var(--dc-gray400) inset;
     color: var(--dc-gray500);
   }
 }
@@ -23,12 +24,12 @@
 .button {
   background-color: var(--dc-gray100);
   border: none;
-  border-radius: 2px;
+  border-radius: var(--dc-radius-2);
   color: var(--dc-black);
   display: flex;
-  height: 20px;
+  height: 100%;
   outline: none;
-  padding: 2px;
+  padding: var(--dc-px-2);
   place-items: center;
   text-align: center;
   width: 20px;
@@ -38,7 +39,7 @@
   background-color: var(--dc-white);
   border: none;
   color: var(--dc-black);
-  font-size: 14px;
+  font-size: var(--dc-px-14);
   font-style: normal;
   outline: none;
   padding: 0;

@@ -1,4 +1,9 @@
 :root {
+  --dc-font-family: 'Sofia Sans';
+  --dc-root-font-size: 16px;
+  --dc-font-normal: 400;
+  --dc-font-semibold: 600;
+
   --dc-white: #ffffff;
   --dc-black: #1a1a1a;
   --dc-gray50: #fafafa;
@@ -12,14 +17,23 @@
   --dc-primary-dark: #245866;
   --dc-surface: #f5f9f9;
 
-  --dc-font-family: 'Sofia Sans';
-  --dc-root-font-size: 16px;
-
+  --dc-px-32: 2rem;
+  --dc-px-26: 1.625rem;
+  --dc-px-24: 1.5rem;
   --dc-px-16: 1rem;
   --dc-px-15: 0.9375rem;
   --dc-px-14: 0.875rem;
+  --dc-px-12: 0.75rem;
   --dc-px-8: 0.5rem;
   --dc-px-6: 0.375rem;
   --dc-px-4: 0.25rem;
+  --dc-px-3: 0.1875rem;
   --dc-px-2: 0.125rem;
+
+  --dc-radius-8: 8px;
+  --dc-radius-4: 4px;
+  --dc-radius-2: 2px;
+
+  --dc-shadow-1: 0 0 0 1px;
+  --dc-shadow-2: 0 0 0 2px;
 }

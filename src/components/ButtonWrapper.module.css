@@ -1,6 +1,6 @@
 .button {
   border: none;
-  border-radius: 8px;
+  border-radius: var(--dc-radius-8);
   display: flex;
   justify-content: center;
   outline: none;
@@ -9,16 +9,16 @@
 
   &.sm {
     font-size: var(--dc-px-14);
-    font-weight: 400;
+    font-weight: var(--dc-font-normal);
     gap: var(--dc-px-4);
-    padding: var(--dc-px-4) var(--dc-px-8);
+    padding: var(--dc-px-4);
   }
 
   &.md {
     font-size: var(--dc-px-16);
-    font-weight: 600;
+    font-weight: var(--dc-font-semibold);
     gap: var(--dc-px-8);
-    padding: var(--dc-px-8) var(--dc-px-16);
+    padding: var(--dc-px-8);
   }
 
   &.primary {
@@ -38,18 +38,18 @@
 
     &.outlined {
       background: var(--dc-white);
-      box-shadow: 0 0 0 1px var(--dc-primary) inset;
+      box-shadow: var(--dc-shadow-1) var(--dc-primary) inset;
       color: var(--dc-primary);
 
       &:hover, &:focus, &:active {
         background: var(--dc-surface);
-        box-shadow: 0 0 0 1px var(--dc-primary-dark) inset;
+        box-shadow: var(--dc-shadow-1) var(--dc-primary-dark) inset;
         color: var(--dc-primary-dark);
       }
 
       &:disabled {
         background: var(--dc-white);
-        box-shadow: 0 0 0 1px var(--dc-gray300) inset;
+        box-shadow: var(--dc-shadow-1) var(--dc-gray300) inset;
         color: var(--dc-gray500);
       }
     }
@@ -73,14 +73,14 @@
 
     &.outlined {
       background: var(--dc-white);
-      box-shadow: 0 0 0 1px var(--dc-gray200) inset;
+      box-shadow: var(--dc-shadow-1) var(--dc-gray200) inset;
 
       &:hover, &:focus, &:active {
-        box-shadow: 0 0 0 1px var(--dc-gray300) inset;
+        box-shadow: var(--dc-shadow-1) var(--dc-gray300) inset;
       }
 
       &:disabled {
-        box-shadow: 0 0 0 1px var(--dc-gray300) inset;
+        box-shadow: var(--dc-shadow-1) var(--dc-gray300) inset;
         color: var(--dc-gray500);
       }
     }
