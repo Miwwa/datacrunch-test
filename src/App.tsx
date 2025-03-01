@@ -1,13 +1,9 @@
 import styles from './App.module.css'
-import {
-  Button,
-  Form,
-  Label,
-  TextField
-} from "react-aria-components";
+import {Form, Label, TextField} from "react-aria-components";
 import TextInput from "./components/TextInput.tsx";
 import NumberInput from "./components/NumberInput.tsx";
 import SliderInput from "./components/SliderInput.tsx";
+import ButtonWrapper, {ButtonColor, ButtonSize, ButtonVariant} from "./components/ButtonWrapper.tsx";
 
 function App() {
 
@@ -40,8 +36,100 @@ function App() {
             maxValue={128}
           />
           <div style={{display: 'flex', gap: 8}}>
-            <Button type="reset">Clear</Button>
-            <Button type="submit">Submit</Button>
+            <ButtonWrapper
+              size={ButtonSize.Small}
+              color={ButtonColor.Primary}
+              variant={ButtonVariant.Contained}
+            >
+              Button
+            </ButtonWrapper>
+            <ButtonWrapper
+              size={ButtonSize.Small}
+              color={ButtonColor.Primary}
+              variant={ButtonVariant.Outlined}
+            >
+              Button
+            </ButtonWrapper>
+            <ButtonWrapper
+              size={ButtonSize.Small}
+              color={ButtonColor.Secondary}
+              variant={ButtonVariant.Contained}
+            >
+              Button
+            </ButtonWrapper>
+            <ButtonWrapper
+              size={ButtonSize.Small}
+              color={ButtonColor.Secondary}
+              variant={ButtonVariant.Outlined}
+            >
+              Button
+            </ButtonWrapper>
+          </div>
+
+          <div style={{display: 'flex', gap: 8, marginTop: 8}}>
+            <ButtonWrapper
+              size={ButtonSize.Medium}
+              color={ButtonColor.Primary}
+              variant={ButtonVariant.Contained}
+            >
+              Button
+            </ButtonWrapper>
+            <ButtonWrapper
+              size={ButtonSize.Medium}
+              color={ButtonColor.Primary}
+              variant={ButtonVariant.Outlined}
+            >
+              Button
+            </ButtonWrapper>
+            <ButtonWrapper
+              size={ButtonSize.Medium}
+              color={ButtonColor.Secondary}
+              variant={ButtonVariant.Contained}
+            >
+              Button
+            </ButtonWrapper>
+            <ButtonWrapper
+              size={ButtonSize.Medium}
+              color={ButtonColor.Secondary}
+              variant={ButtonVariant.Outlined}
+            >
+              Button
+            </ButtonWrapper>
+          </div>
+
+          <div style={{display: 'flex', gap: 8, marginTop: 8}}>
+            <ButtonWrapper
+              size={ButtonSize.Medium}
+              color={ButtonColor.Primary}
+              variant={ButtonVariant.Contained}
+              isDisabled={true}
+            >
+              Button
+            </ButtonWrapper>
+            <ButtonWrapper
+              size={ButtonSize.Medium}
+              color={ButtonColor.Primary}
+              variant={ButtonVariant.Outlined}
+              isDisabled={true}
+            >
+              Button
+            </ButtonWrapper>
+            <ButtonWrapper
+              size={ButtonSize.Medium}
+              color={ButtonColor.Secondary}
+              variant={ButtonVariant.Contained}
+              isDisabled={true}
+            >
+              Button
+            </ButtonWrapper>
+            <ButtonWrapper
+              size={ButtonSize.Medium}
+              color={ButtonColor.Secondary}
+              variant={ButtonVariant.Outlined}
+              isDisabled={true}
+            >
+              Button
+            </ButtonWrapper>
           </div>
         </Form>
       </div>

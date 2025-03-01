@@ -3,11 +3,23 @@
   --dc-black: #1a1a1a;
   --dc-gray50: #fafafa;
   --dc-gray100: #f5f5f5;
+  --dc-gray200: #eeeeee;
   --dc-gray300: #e1e1e1;
   --dc-gray400: #b9b9b9;
   --dc-gray500: #909090;
   --dc-gray600: #707070;
   --dc-primary: #4b7a8a;
+  --dc-primary-dark: #245866;
+  --dc-surface: #f5f9f9;
 
   --dc-font-family: 'Sofia Sans';
+  --dc-root-font-size: 16px;
+
+  --dc-px-16: 1rem;
+  --dc-px-15: 0.9375rem;
+  --dc-px-14: 0.875rem;
+  --dc-px-8: 0.5rem;
+  --dc-px-6: 0.375rem;
+  --dc-px-4: 0.25rem;
+  --dc-px-2: 0.125rem;
 }
