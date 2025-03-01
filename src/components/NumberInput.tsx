@@ -1,4 +1,4 @@
-import {Button, Input, NumberField} from "react-aria-components";
+import {Button, Input, NumberField} from 'react-aria-components'
 import PlusIcon from '../icons/plus.svg'
 import MinusIcon from '../icons/minus.svg'
 import styles from './NumberInput.module.css'

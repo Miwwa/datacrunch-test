@@ -1,5 +1,5 @@
-import {Input} from "react-aria-components";
-import styles from './TextInput.module.css';
+import {Input} from 'react-aria-components'
+import styles from './TextInput.module.css'
 
 export type TextInputProps = {
   value?: string;
@@ -8,7 +8,7 @@ export type TextInputProps = {
   disabled?: boolean;
 }
 
-export default function TextInput({value, onChange, placeholder = "enter text", disabled = false}: TextInputProps) {
+export default function TextInput({value, onChange, placeholder = 'enter text', disabled = false}: TextInputProps) {
   return (
     <Input
       className={styles.input}
@@ -17,5 +17,5 @@ export default function TextInput({value, onChange, placeholder = "enter text", 
       value={value}
       onChange={(e) => onChange?.(e.target.value)}
     />
-  );
+  )
 }

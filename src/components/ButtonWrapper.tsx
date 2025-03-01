@@ -1,6 +1,6 @@
-import {ReactNode} from 'react';
-import {Button, ButtonProps} from "react-aria-components";
-import styles from './ButtonWrapper.module.css';
+import {ReactNode} from 'react'
+import {Button, ButtonProps} from 'react-aria-components'
+import styles from './ButtonWrapper.module.css'
 
 export enum ButtonSize {
   Small = 'sm',
@@ -42,9 +42,9 @@ export default function ButtonWrapper(
     color = ButtonColor.Primary,
     variant = ButtonVariant.Contained,
     ...props
-  }: ButtonWrapperProps
+  }: ButtonWrapperProps,
 ) {
-  const buttonClass = `${styles.button} ${stylesMap[size]} ${stylesMap[color]} ${stylesMap[variant]}`;
+  const buttonClass = `${styles.button} ${stylesMap[size]} ${stylesMap[color]} ${stylesMap[variant]}`
 
   return (
     <Button

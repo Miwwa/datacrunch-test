@@ -1,6 +1,6 @@
-import {useState} from "react";
-import {Slider, SliderThumb, SliderTrack} from "react-aria-components";
-import styles from './SliderInput.module.css';
+import {useState} from 'react'
+import {Slider, SliderThumb, SliderTrack} from 'react-aria-components'
+import styles from './SliderInput.module.css'
 
 export type SliderInputProps = {
   value?: number

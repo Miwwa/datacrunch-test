@@ -1,8 +1,8 @@
 import styles from './App.module.css'
-import TextInput from "./components/TextInput.tsx";
-import NumberInput from "./components/NumberInput.tsx";
-import SliderInput from "./components/SliderInput.tsx";
-import ButtonWrapper, {ButtonColor, ButtonSize, ButtonVariant} from "./components/ButtonWrapper.tsx";
+import TextInput from './components/TextInput.tsx'
+import NumberInput from './components/NumberInput.tsx'
+import SliderInput from './components/SliderInput.tsx'
+import ButtonWrapper, {ButtonColor, ButtonSize, ButtonVariant} from './components/ButtonWrapper.tsx'
 
 function App() {
 
@@ -125,6 +125,15 @@ function App() {
             variant={ButtonVariant.Outlined}
             isDisabled={true}
           >
+            Button
+          </ButtonWrapper>
+
+          <ButtonWrapper
+            size={ButtonSize.Small}
+            color={ButtonColor.Primary}
+            variant={ButtonVariant.Contained}
+          >
+
             Button
           </ButtonWrapper>
         </div>

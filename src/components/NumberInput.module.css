@@ -5,9 +5,9 @@
   color: var(--dc-black);
   display: flex;
   height: var(--dc-px-26);
-  padding: var(--dc-px-3);
-  min-width: 80px;
   max-width: 108px;
+  min-width: 80px;
+  padding: var(--dc-px-3);
   width: 100%;
 
   &:focus-within {
