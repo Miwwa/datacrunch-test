@@ -1,23 +1,14 @@
 import {useState} from 'react'
-import {Slider, SliderThumb, SliderTrack} from 'react-aria-components'
+import {Slider, SliderProps, SliderThumb, SliderTrack} from 'react-aria-components'
 import styles from './SliderInput.module.css'
 
-export type SliderInputProps = {
-  value?: number
-  defaultValue?: number
-  onChange?: (value: number) => void
-  minValue?: number
-  maxValue?: number
-}
-
-export default function SliderInput({value, defaultValue, onChange, minValue = 0, maxValue = 100}: SliderInputProps) {
+export default function SliderInput({onChange, minValue = 0, maxValue = 100, ...props}: SliderProps<number>) {
   const [fillPercent, setFillPercent] = useState(0)
 
   return (
     <Slider
+      {...props}
       className={styles.slider}
-      value={value}
-      defaultValue={defaultValue}
       minValue={minValue}
       maxValue={maxValue}
       onChange={(v) => {

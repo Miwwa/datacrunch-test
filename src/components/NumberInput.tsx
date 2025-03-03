@@ -1,28 +1,11 @@
-import {Button, Input, NumberField} from 'react-aria-components'
+import {Button, Input, NumberField, NumberFieldProps} from 'react-aria-components'
 import PlusIcon from '../icons/plus.svg'
 import MinusIcon from '../icons/minus.svg'
 import styles from './NumberInput.module.css'
 
-export type NumberInputProps = {
-  value?: number
-  defaultValue?: number
-  onChange?: (value: number) => void
-  minValue?: number
-  maxValue?: number
-  isDisabled?: boolean
-}
-
-export default function NumberInput({value, defaultValue, onChange, minValue, maxValue, isDisabled}: NumberInputProps) {
+export default function NumberInput({...props}: NumberFieldProps) {
   return (
-    <NumberField
-      value={value}
-      defaultValue={defaultValue}
-      minValue={minValue}
-      maxValue={maxValue}
-      onChange={onChange}
-      className={styles.field}
-      isDisabled={isDisabled}
-    >
+    <NumberField {...props} className={styles.field}>
       <Button slot="decrement" className={styles.button}>
         <MinusIcon/>
       </Button>

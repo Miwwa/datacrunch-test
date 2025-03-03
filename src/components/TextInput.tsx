@@ -1,21 +1,18 @@
-import {Input} from 'react-aria-components'
+import {Input, InputProps} from 'react-aria-components'
 import styles from './TextInput.module.css'
 
 export type TextInputProps = {
-  value?: string;
-  onChange?: (value: string) => void;
   placeholder?: string;
-  disabled?: boolean;
-}
+  onChange?: (value: string) => void;
+} & InputProps;
 
-export default function TextInput({value, onChange, placeholder = 'enter text', disabled = false}: TextInputProps) {
+export default function TextInput({onChange, placeholder = 'enter text', ...props}: TextInputProps) {
   return (
     <Input
       className={styles.input}
       placeholder={placeholder}
-      disabled={disabled}
-      value={value}
       onChange={(e) => onChange?.(e.target.value)}
+      {...props}
     />
   )
 }
