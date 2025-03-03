@@ -1,6 +1,7 @@
 .slider {
   display: flex;
   height: var(--dc-px-24);
+  padding: 0 var(--dc-px-8);
   place-items: center;
   width: 100%;
 }
