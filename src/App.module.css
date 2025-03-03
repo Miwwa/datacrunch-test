@@ -1,10 +1,10 @@
 .card {
   background: #ffffff;
   border: 1px solid #dddddd;
-  border-radius: 8px;
-  padding: 2rem;
+  border-radius: var(--dc-radius-8);
+  padding: var(--dc-px-40);
 
-  max-width: 500px;
+  max-width: 367px;
   width: 100%;
 
   display: flex;

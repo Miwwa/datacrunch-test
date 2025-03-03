@@ -5,13 +5,24 @@ import SliderInput from './components/SliderInput.tsx'
 import ButtonWrapper, {ButtonColor, ButtonSize, ButtonVariant, IconPosition} from './components/ButtonWrapper.tsx'
 import PlusIcon from './icons/plus.svg'
 import TrashIcon from './icons/trash.svg'
+import TestForm from './form/TestForm.tsx'
+import {useState} from 'react'
 
 function App() {
 
+  const [formText, setFormText] = useState('')
+
   return (
     <>
-      <h1>Showcase</h1>
+      {/* Test form */}
+      <h1>Form</h1>
       <div className={styles.card}>
+        <TestForm onSubmit={(data) => setFormText(`Name: ${data.name}, Size: ${data.size}Gb`)}/>
+        {formText && <div>{formText}</div>}
+      </div>
+      {/* Components showcase */}
+      <h1>Showcase</h1>
+      <div className={styles.card} style={{maxWidth: 550, width: '100%'}}>
         <div className={styles.header}>Text Input</div>
         <div>normal</div>
         <TextInput/>

@@ -1,0 +1,35 @@
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.flexRow {
+  display: flex;
+  justify-content: stretch;
+  align-items: flex-end;
+}
+
+.gap8 {
+  gap: var(--dc-px-8);
+}
+
+.gap16 {
+  gap: var(--dc-px-16);
+}
+
+.gap24 {
+  gap: var(--dc-px-24);
+}
+
+.marginBottom24 {
+  margin-bottom: var(--dc-px-24);
+}
+
+.marginBottom32 {
+  margin-bottom: var(--dc-px-32);
+}
+
+.nameInput {
+  width: 100%;
+  max-width: 178px;
+}
