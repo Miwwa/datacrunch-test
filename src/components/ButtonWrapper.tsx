@@ -22,14 +22,14 @@ export enum IconPosition {
   End = 'end',
 }
 
-export type ButtonWrapperProps = {
+export type ButtonWrapperProps = ButtonProps & {
   children?: ReactNode;
   size?: ButtonSize;
   color?: ButtonColor;
   variant?: ButtonVariant;
   icon?: ReactNode;
   iconPosition?: IconPosition;
-} & ButtonProps;
+};
 
 const stylesMap = {
   [ButtonSize.Small]: styles.sm,
