@@ -7,18 +7,51 @@
   place-items: center;
   width: 100%;
 
+  svg {
+    max-height: var(--dc-px-16);
+    max-width: var(--dc-px-16);
+
+    path {
+      fill: currentColor;
+    }
+  }
+
   &.sm {
     font-size: var(--dc-px-14);
     font-weight: var(--dc-font-normal);
     gap: var(--dc-px-4);
-    padding: var(--dc-px-4);
+    padding: var(--dc-px-2);
+
+    .label:first-child {
+      margin-left: var(--dc-px-2);
+    }
+
+    .label:last-child {
+      margin-right: var(--dc-px-2);
+    }
+
+    .label:only-child {
+      margin: 0 var(--dc-px-2);
+    }
   }
 
   &.md {
     font-size: var(--dc-px-16);
     font-weight: var(--dc-font-semibold);
     gap: var(--dc-px-8);
-    padding: var(--dc-px-8);
+    padding: var(--dc-px-8) var(--dc-px-12);
+
+    .label:first-child {
+      margin-left: var(--dc-px-4);
+    }
+
+    .label:last-child {
+      margin-right: var(--dc-px-4);
+    }
+
+    .label:only-child {
+      margin: 0 var(--dc-px-4);
+    }
   }
 
   &.primary {

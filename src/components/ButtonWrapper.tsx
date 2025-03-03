@@ -17,12 +17,18 @@ export enum ButtonVariant {
   Outlined = 'outlined',
 }
 
+export enum IconPosition {
+  Start = 'start',
+  End = 'end',
+}
+
 export type ButtonWrapperProps = {
-  children: ReactNode;
+  children?: ReactNode;
   size?: ButtonSize;
   color?: ButtonColor;
   variant?: ButtonVariant;
-  isDisabled?: boolean;
+  icon?: ReactNode;
+  iconPosition?: IconPosition;
 } & ButtonProps;
 
 const stylesMap = {
@@ -38,6 +44,9 @@ const stylesMap = {
 
 export default function ButtonWrapper(
   {
+    children,
+    icon,
+    iconPosition = IconPosition.Start,
     size = ButtonSize.Medium,
     color = ButtonColor.Primary,
     variant = ButtonVariant.Contained,
@@ -51,7 +60,9 @@ export default function ButtonWrapper(
       className={buttonClass}
       {...props}
     >
-      {props.children}
+      {icon && iconPosition === IconPosition.Start && icon}
+      {children && <span className={styles.label}>{children}</span>}
+      {icon && iconPosition === IconPosition.End && icon}
     </Button>
   )
 }

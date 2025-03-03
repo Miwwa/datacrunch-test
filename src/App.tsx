@@ -2,7 +2,9 @@ import styles from './App.module.css'
 import TextInput from './components/TextInput.tsx'
 import NumberInput from './components/NumberInput.tsx'
 import SliderInput from './components/SliderInput.tsx'
-import ButtonWrapper, {ButtonColor, ButtonSize, ButtonVariant} from './components/ButtonWrapper.tsx'
+import ButtonWrapper, {ButtonColor, ButtonSize, ButtonVariant, IconPosition} from './components/ButtonWrapper.tsx'
+import PlusIcon from './icons/plus.svg'
+import TrashIcon from './icons/trash.svg'
 
 function App() {
 
@@ -38,7 +40,8 @@ function App() {
         />
 
         <div className={styles.header}>Button</div>
-        <div style={{display: 'grid', gap: 8, gridTemplateColumns: 'repeat(4, 1fr)'}}>
+        <div style={{display: 'grid', gap: 8, gridTemplateColumns: 'repeat(auto-fit, minmax(100px, 1fr))'}}>
+          {/* Small Buttons */}
           <ButtonWrapper
             size={ButtonSize.Small}
             color={ButtonColor.Primary}
@@ -67,6 +70,41 @@ function App() {
           >
             Button
           </ButtonWrapper>
+          {/* Small Buttons with icons */}
+          <ButtonWrapper
+            size={ButtonSize.Small}
+            color={ButtonColor.Primary}
+            variant={ButtonVariant.Contained}
+            icon={<PlusIcon/>}
+            iconPosition={IconPosition.Start}
+          >
+            Button
+          </ButtonWrapper>
+          <ButtonWrapper
+            size={ButtonSize.Small}
+            color={ButtonColor.Primary}
+            variant={ButtonVariant.Contained}
+            icon={<PlusIcon/>}
+            iconPosition={IconPosition.End}
+          >
+            Button
+          </ButtonWrapper>
+          <ButtonWrapper
+            size={ButtonSize.Small}
+            color={ButtonColor.Primary}
+            variant={ButtonVariant.Contained}
+            icon={<PlusIcon/>}
+          />
+          <ButtonWrapper
+            size={ButtonSize.Small}
+            color={ButtonColor.Primary}
+            variant={ButtonVariant.Contained}
+            icon={<PlusIcon/>}
+            isDisabled={true}
+          >
+            Button
+          </ButtonWrapper>
+          {/* Medium Buttons */}
           <ButtonWrapper
             size={ButtonSize.Medium}
             color={ButtonColor.Primary}
@@ -95,6 +133,7 @@ function App() {
           >
             Button
           </ButtonWrapper>
+          {/* Medium Buttons disabled */}
           <ButtonWrapper
             size={ButtonSize.Medium}
             color={ButtonColor.Primary}
@@ -127,13 +166,38 @@ function App() {
           >
             Button
           </ButtonWrapper>
-
+          {/* Medium Buttons with icons */}
           <ButtonWrapper
-            size={ButtonSize.Small}
+            size={ButtonSize.Medium}
             color={ButtonColor.Primary}
-            variant={ButtonVariant.Contained}
+            variant={ButtonVariant.Outlined}
+            icon={<TrashIcon/>}
+            iconPosition={IconPosition.Start}
           >
-
+            Button
+          </ButtonWrapper>
+          <ButtonWrapper
+            size={ButtonSize.Medium}
+            color={ButtonColor.Primary}
+            variant={ButtonVariant.Outlined}
+            icon={<TrashIcon/>}
+            iconPosition={IconPosition.End}
+          >
+            Button
+          </ButtonWrapper>
+          <ButtonWrapper
+            size={ButtonSize.Medium}
+            color={ButtonColor.Primary}
+            variant={ButtonVariant.Outlined}
+            icon={<TrashIcon/>}
+          />
+          <ButtonWrapper
+            size={ButtonSize.Medium}
+            color={ButtonColor.Primary}
+            variant={ButtonVariant.Outlined}
+            icon={<TrashIcon/>}
+            isDisabled={true}
+          >
             Button
           </ButtonWrapper>
         </div>
