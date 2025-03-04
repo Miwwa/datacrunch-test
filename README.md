@@ -2,6 +2,8 @@
 
 Implementation of a small part of a design system.
 
+Deployed to [Github Pages](https://miwwa.github.io/datacrunch-test/)
+
 ## Prerequisites
 
 - Node.js >= v.20
