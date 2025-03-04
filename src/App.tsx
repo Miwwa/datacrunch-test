@@ -16,13 +16,13 @@ function App() {
     <>
       {/* Test form */}
       <h1>Form</h1>
-      <div className={styles.card}>
+      <div className={`${styles.card} ${styles.formCardWidth}`}>
         <TestForm onSubmit={(data) => setFormText(`Name: ${data.name}, Size: ${data.size}Gb`)}/>
         {formText && <div>{formText}</div>}
       </div>
       {/* Components showcase */}
       <h1>Showcase</h1>
-      <div className={styles.card} style={{maxWidth: 550, width: '100%'}}>
+      <div className={`${styles.card} ${styles.showCardWidth}`}>
         <div className={styles.header}>Text Input</div>
         <div>normal</div>
         <TextInput/>

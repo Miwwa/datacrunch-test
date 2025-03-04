@@ -66,7 +66,7 @@ export default function TestForm({onSubmit}: TestFormProps) {
         />
       </div>
       {/* Buttons */}
-      <div className={`${styles.flexRow} ${styles.gap16}`}>
+      <div className={`${styles.flexRow} ${styles.flexJustifyStretch} ${styles.gap16}`}>
         <ButtonWrapper type="reset" icon={<TrashIcon/>} variant={ButtonVariant.Outlined}>
           Clear
         </ButtonWrapper>

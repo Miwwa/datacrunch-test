@@ -1,23 +1,30 @@
+@import "utils.module.css";
+
 .card {
   background: #ffffff;
   border: 1px solid #dddddd;
   border-radius: var(--dc-radius-8);
-  padding: var(--dc-px-40);
-
-  max-width: 367px;
-  width: 100%;
-
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: var(--dc-px-8);
+  padding: var(--dc-px-40);
+  width: 100%;
 
   .header {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-top: 1rem;
+    font-size: var(--dc-px-24);
+    font-weight: var(--dc-font-semibold);
+    margin-top: var(--dc-px-16);
 
     &:first-child {
       margin-top: 0;
     }
   }
+}
+
+.formCardWidth {
+  max-width: 367px;
+}
+
+.showCardWidth {
+  max-width: 550px;
 }
