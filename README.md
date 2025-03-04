@@ -29,4 +29,4 @@ npm install
 npm run dev
 ```
 
-4. Open browser by the link [http://localhost:5173/](http://localhost:5173/)
+4. Open browser by the link [http://localhost:5173/datacrunch-test/](http://localhost:5173/datacrunch-test/)
